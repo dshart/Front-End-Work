@@ -6,7 +6,7 @@ const tributesDataArray  = [
     {item : "Free oil change", queenId: 5},
     {item : "Lump of coal", queenId: 2},
     {item: "New pair of Nike shoes", queenId: 4},
-    {item: "A bullet to the head", queenId: 17}
+    {item: "A bullet to the head", queenId: 1}
 ];
 
 const database = {
