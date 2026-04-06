@@ -1,10 +1,10 @@
 import { queensOfOld, tributeChest, hailTheQueen } from "./functions.js";
-import { tributesData } from "./data.js";
+import { database } from "./data.js";
 
 
 // Call the imported function
 const queens = queensOfOld();
-const tributes = tributeChest(tributesData);
+const tributes = tributeChest(database);
 
 for (let tribute of tributes) {
    console.log(

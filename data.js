@@ -1,7 +1,7 @@
 
-const queensData = ["Esther", "Elizabeth", "Monica Seles", "Pat Benetar", "Condaleeza Rice"];
+const queensDataArray = ["Esther", "Elizabeth", "Monica Seles", "Pat Benetar", "Condaleeza Rice"];
 
-const tributesData  = [
+const tributesDataArray  = [
     {item: "Bag of donuts", queenId: 5},
     {item : "Free oil change", queenId: 5},
     {item : "Lump of coal", queenId: 2},
@@ -9,5 +9,10 @@ const tributesData  = [
     {item: "A bullet to the head", queenId: 17}
 ];
 
-export {queensData, tributesData};
+const database = {
+  queensData : queensDataArray,
+  tributesData : tributesDataArray
+};
+
+export {database};
 
