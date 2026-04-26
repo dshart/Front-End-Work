@@ -4,7 +4,7 @@ const {
   longestTrailMiles, 
   leastExpensiveTrails, 
   mostExpensiveTrails
-} = require("./trails.js")
+} = require("./trails.js").default
   
 const {
   totalRiverMiles,
@@ -12,11 +12,11 @@ const {
   longestRiverMiles,
   leastExpensiveRivers,
   mostExpensiveRivers
-} = require("./rivers.js")
+} = require("./rivers.js").default
 
 const {
   database,
-} = require("./database.js")
+} = require("./database.js").default
 
 
 console.log(`
@@ -108,14 +108,3 @@ for (const river of rivers) {
     console.log(`${river.name}'s starts at [${river.latitude}, ${river.longitude}] and is ${river.length} kilometers long.
 The unique fish for the trip is the ${river.uniqueFish}.
 `)};
-
-
-
-//for reference can be used with either trail or river
-//consolidated for any tour type as long as $ amount is same
-// function mostExpensiveTours(tourType) {
-//   let highCostTour = tourType.filter(
-//     x => x.price.length >= 4
-// );
-// return highCostTour;
-// }

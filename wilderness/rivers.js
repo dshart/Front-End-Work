@@ -43,7 +43,7 @@ function mostExpensiveRivers(rivers) {
   return highCostRivers;
 }
 
-module.exports = {
+export default {
   totalRiverMiles,
   shortestRiverMiles,
   longestRiverMiles,

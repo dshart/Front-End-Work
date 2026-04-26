@@ -1,49 +1,36 @@
  const totalTrailMiles = (trails) => {
     let total = 0;
-    for (const trail of trails) {
-        total += trail.length;
-    }
-
+    trails.filter(trail => total += trail.length)
     return total.toFixed(1);
-    };
+  };
 
-    const shortestTrailMiles = (trails) => {
-    let shortest = 10000;
-    for (const trail of trails) {
-        if (trail.length < shortest) {
-        shortest = trail.length;
-        }
-    }
-
-    return shortest;
-    };
-
-    const longestTrailMiles = (trails) => {
-    let longest = 0;
-    for (const trail of trails) {
-        if (trail.length > longest) {
-        longest = trail.length;
-        }
-    }
-
+  const shortestTrailMiles = (trails) => {
+      let shortest = Number.MAX_VALUE;
+      trails.filter(trail => shortest = Math.min(trail.length, shortest));
+      return shortest;  
+  };  
+    
+  const longestTrailMiles = (trails) => {
+    let longest = Number.MIN_VALUE;
+    trails.filter(trail => longest = Math.max(trail.length, longest));
     return longest;
-    };
+  };
 
-    const leastExpensiveTrails = (trails) =>  {
+  const leastExpensiveTrails = (trails) =>  {
     let lowCostTrails = trails.filter(
-        lowCostTrail => lowCostTrail.price.length === 1
+      lowCostTrail => lowCostTrail.price.length === 1
     );
     return lowCostTrails;
     };
 
-    function mostExpensiveTrails(trails) {
+  function mostExpensiveTrails(trails) {
     let highCostTrails = trails.filter(
         highCostTrail => highCostTrail.price.length >= 4
     );
     return highCostTrails;
   }
 
-  module.exports = {
+  export default {
     totalTrailMiles,
     shortestTrailMiles,
     longestTrailMiles,

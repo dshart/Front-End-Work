@@ -456,4 +456,4 @@ const database = {
     ]
 };
 
-module.exports = { database };
+export default { database };
