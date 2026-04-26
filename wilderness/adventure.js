@@ -1,6 +1,5 @@
 const {
-  trails, 
-  totalTrailMiles, 
+   totalTrailMiles, 
   shortestTrailMiles, 
   longestTrailMiles, 
   leastExpensiveTrails, 
@@ -8,13 +7,16 @@ const {
 } = require("./trails.js")
   
 const {
-  rivers,
   totalRiverMiles,
   shortestRiverMiles,
   longestRiverMiles,
   leastExpensiveRivers,
   mostExpensiveRivers
 } = require("./rivers.js")
+
+const {
+  database,
+} = require("./database.js")
 
 
 console.log(`
@@ -39,6 +41,10 @@ console.log("***************************************************");
 
 console.log(`
 TRAIL DETAILS:`);
+
+//assign database array to var for cleaner code
+const trails = database.trails;
+const rivers = database.rivers;
 
 //Call Functions and use return values *****************************************************
 const trailTotal = totalTrailMiles(trails);
