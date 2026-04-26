@@ -16,12 +16,29 @@ const {
   mostExpensiveRivers
 } = require("./rivers.js")
 
-const {bjornHeading} = require("./printBjornHeading.js");
-const {trailsHeading} = require("./printTrailsHeading.js");
-const {riversHeading} = require("./printRiversHeading.js");
 
-bjornHeading();
-trailsHeading();
+console.log(`
+    B J Ö R N ' S   W I L D N E R N E S S   A D V E N T U R E S
+    ***********************************************************
+
+                                                        ###
+        ______                                         #o###
+       /     /\     (              ______            #####o###
+      /     /  \     )            /     /\          #o#\#|#/###
+     /_____/----\_    (          /     /  \          ###\|/#o#
+    '     '          ).         /_____/----\_         # }|{  #
+   _ ___          O (:') o      '  '     '   '          }|{
+  (@))_))        O ~/~~\~ o                             }|{
+                  o     O                          ____/   \____
+                     O
+`);
+
+console.log("***************************************************");
+console.log("*****              T R A I L S                *****");
+console.log("***************************************************");
+
+console.log(`
+TRAIL DETAILS:`);
 
 //Call Functions and use return values *****************************************************
 const trailTotal = totalTrailMiles(trails);
@@ -51,8 +68,11 @@ ${trail.name}'s Route starts at [${trail.latitude}, ${trail.longitude}] and is $
 The highlighted plant for the trip is the ${trail.plantHighlight}.`);
 }
 
+console.log(`
+***************************************************`);
+console.log("*****              R I V E R S                *****");
+console.log("***************************************************");
 
-riversHeading();
 const riverTotal = totalRiverMiles(rivers);
 console.log(
 `We offer expert guidance on ${riverTotal} kilometers of scenic rivers across the US`,
