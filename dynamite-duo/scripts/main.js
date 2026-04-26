@@ -1,5 +1,3 @@
-const mainElement = document.querySelector("#container");
-
 //Import the function references that generate the HTML lists
 import {HeroList} from "./heroes.js";
 import {VillainList} from "./villains.js";
@@ -17,5 +15,6 @@ const heroesAndVillainsHTML = `
     ${villainListHTML}
 `    
 
-//Overwrite existing HTML at this location
+//Find and overwrite existing HTML at this location
+const mainElement = document.querySelector("#container");
 mainElement.innerHTML = heroesAndVillainsHTML;
