@@ -1,5 +1,5 @@
 export const renderMoviesToDOM = (movieHTML) => {
-    const movieList = document.querySelector("#movie-list");
+    const movieList = document.getElementById("movie-list");
 
     if (movieList) {
         movieList.innerHTML = movieHTML;
